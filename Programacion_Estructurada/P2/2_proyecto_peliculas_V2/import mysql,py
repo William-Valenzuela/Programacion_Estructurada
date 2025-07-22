@@ -1,0 +1,14 @@
+import mysql.connector
+
+def conectar():
+    try:
+        conexion = mysql.connector.connect(
+            host="127.0.0.1",
+            user="",
+            password="",
+            database="peliculas"
+        )
+        return conexion
+    except mysql.connector.Error as e:
+        print(f"Error que se ha producido: {e}")
+    return None
